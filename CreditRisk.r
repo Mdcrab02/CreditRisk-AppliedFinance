@@ -5,7 +5,7 @@ library(rpart.plot)
 library(pROC)
 
 #Load the data into the workspace
-loan_data <- readRDS(file="loan_data.rds")
+loan_data <- readRDS(file="./data/loan_data.rds")
 str(loan_data)
 
 #Look at the number of defaults, non-defaults, and their proportions

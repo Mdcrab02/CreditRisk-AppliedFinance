@@ -239,7 +239,7 @@ ptree_undersample <- prune(tree_undersample, cp = tree_min)
 #Use prp() to plot the pruned tree
 prp(ptree_undersample)
 
-#Change the code below such that a tree is constructed with adjusted prior probabilities.
+#Construct a tree with adjusted prior probabilities.
 tree_prior <- rpart(loan_status ~ .,
                     method = "class",
                     data = training_set,
@@ -382,7 +382,7 @@ strategy_cloglog <- strategy_bank(predictions_cloglog)
 #Obtain the strategy tables for both prediction-vectors
 strategy_cloglog$table
 
-#Plot the strategy functions
+#Plot the strategy function
 par(mfrow = c(1,2))
 plot(strategy_cloglog$accept_rate, strategy_cloglog$bad_rate, 
      type = "l", xlab = "Acceptance rate", ylab = "Bad rate", 
